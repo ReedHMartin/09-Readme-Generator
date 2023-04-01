@@ -60,7 +60,17 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer.prompt(questions).then((answers) => {
+    // Generate the README content using the user input (You'll need to create a generateMarkdown function in the `generateMarkdown.js` file)
+    // const content = generateMarkdown(answers);
+    // For now, let's just create a placeholder content
+    const content = JSON.stringify(answers, null, 2);
+    
+    // Write the content to a README file
+    writeToFile('README_generated.md', content);
+  });
+}
 
 // Function call to initialize app
 init();
