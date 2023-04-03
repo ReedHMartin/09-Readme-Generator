@@ -74,4 +74,5 @@ Check out my GitHub profile [${data.githubUsername}](https://github.com/${data.g
 `;
 }
 
+// Export the generateMarkdown function
 module.exports = generateMarkdown;
